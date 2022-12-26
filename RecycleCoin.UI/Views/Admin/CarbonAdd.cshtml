@@ -1,0 +1,188 @@
+﻿@model CarbonAddViewModel
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-warning" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<h1>Ürün Ekle</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group mt-5 mb-5">
+            <form asp-action="CarbonAluminumAdd">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Alüminyüm<HR /></h1>
+                <div class="form-group">
+                    <label asp-for="Identity" class="control-label">Kullanıcının SHA-256 Adresi</label>
+                    <input asp-for="Identity" class="form-control" />
+                    <span asp-validation-for="Identity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AluminsNumber" class="control-label">Adet</label>
+                    <input asp-for="AluminsNumber" class="form-control" />
+                    <span asp-validation-for="AluminsNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="AluminsValue">Alüminyumlar</label>
+                    <fieldset>
+                        <select asp-for="AluminsValue" class="btn btn-sm btn-custom2 form-control dropdown-toggle">
+                            @foreach (var item in Model.Aluminums)
+                            {
+                                <option value=@Convert.ToDouble(item.CarbonValue)> @item.Object </option>
+                            }
+                        </select>
+                    </fieldset>
+                    <span asp-validation-for="AluminsValue" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Ekle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+        <div class="form-group mt-5 mb-5">
+            <form asp-action="CarbonIronsAdd">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Demir<HR /></h1>
+                <div class="form-group">
+                    <label asp-for="Identity" class="control-label">Kullanıcının SHA-256 Adresi</label>
+                    <input asp-for="Identity" class="form-control" />
+                    <span asp-validation-for="Identity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IronsNumber" class="control-label">Adet</label>
+                    <input asp-for="IronsNumber" class="form-control" />
+                    <span asp-validation-for="IronsNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="IronsValue">Demirler</label>
+                    <fieldset>
+                        <select asp-for="IronsValue" class="btn btn-sm btn-custom2 form-control dropdown-toggle">
+                            @foreach (var item in Model.Irons)
+                            {
+                                <option value=@Convert.ToDouble(item.CarbonValue)> @item.Object </option>
+                            }
+                        </select>
+                    </fieldset>
+                    <span asp-validation-for="IronsValue" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Ekle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+        <div class="form-group mt-5 mb-5">
+            <form asp-action="CarbonPapersAdd">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Kağıt<HR /></h1>
+                <div class="form-group">
+                    <label asp-for="Identity" class="control-label">Kullanıcının SHA-256 Adresi</label>
+                    <input asp-for="Identity" class="form-control" />
+                    <span asp-validation-for="Identity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PapersNumber" class="control-label">Adet</label>
+                    <input asp-for="PapersNumber" class="form-control" />
+                    <span asp-validation-for="PapersNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="PapersValue">Kağıtlar</label>
+                    <fieldset>
+                        <select asp-for="PapersValue" class="btn btn-sm btn-custom2 form-control dropdown-toggle">
+                            @foreach (var item in Model.Papers)
+                            {
+                                <option value=@Convert.ToDouble(item.CarbonValue)> @item.Object </option>
+                            }
+                        </select>
+                    </fieldset>
+                    <span asp-validation-for="PapersValue" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Ekle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+        <div class="form-group mt-5 mb-5">
+            <form asp-action="CarbonPinesAdd">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Cam<HR /></h1>
+                <div class="form-group">
+                    <label asp-for="Identity" class="control-label">Kullanıcının SHA-256 Adresi</label>
+                    <input asp-for="Identity" class="form-control" />
+                    <span asp-validation-for="Identity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PinesNumber" class="control-label">Adet</label>
+                    <input asp-for="PinesNumber" class="form-control" />
+                    <span asp-validation-for="PinesNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="PinesValue">Camlar</label>
+                    <fieldset>
+                        <select asp-for="PinesValue" class="btn btn-sm btn-custom2 form-control dropdown-toggle">
+                            @foreach (var item in Model.Pines)
+                            {
+                                <option value=@Convert.ToDouble(item.CarbonValue)> @item.Object </option>
+                            }
+                        </select>
+                    </fieldset>
+                    <span asp-validation-for="PinesValue" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Ekle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        
+        <div class="form-group mt-5 mb-5">
+            <form asp-action="CarbonPlasticsAdd">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Plastik<HR /></h1>
+                <div class="form-group">
+                    <label asp-for="Identity" class="control-label">Kullanıcının SHA-256 Adresi</label>
+                    <input asp-for="Identity" class="form-control" />
+                    <span asp-validation-for="Identity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PlasticsNumber" class="control-label">Adet</label>
+                    <input asp-for="PlasticsNumber" class="form-control" />
+                    <span asp-validation-for="PlasticsNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="PlasticsValue">Plastikler</label>
+                    <fieldset>
+                        <select asp-for="PlasticsValue" class="btn btn-sm btn-custom2 form-control dropdown-toggle">
+                            @foreach (var item in Model.Plastics)
+                            {
+                                <option value=@Convert.ToDouble(item.CarbonValue)> @item.Object </option>
+                            }
+                        </select>
+                    </fieldset>
+                    <span asp-validation-for="PlasticsValue" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Ekle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

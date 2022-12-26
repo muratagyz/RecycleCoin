@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.color-green {
+    color: green !important;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*Navbar*/
+.navbar-light {
+    background: transparent !important;
+    padding: 0;
+    font-size: 13px;
+}
+
+    .navbar-light a {
+        color: white !important;
+        font-weight: 400;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        padding: 10px;
+    }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: rgba(0,0,0,.7);
+            background: rgba(0,0,0,.3);
+            padding: 10px;
+        }
+
+.navbar-link-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .navbar-link-icon-container i {
+        margin-right: 5px
+    }
+
+.login {
+    flex-flow: row;
+    display: flex;
+}
+/*Navbar*/
+/*Jumbotron Home*/
+.jumbotron-home {
+    padding-top: -57px;
+}
+
+    .jumbotron-home .container-fluid {
+        background: linear-gradient(#0000008f,#0000008f),url('../img/gerid1.jpg');
+        margin-top: -99px !important;
+        height: 107vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+        .jumbotron-home .container-fluid h1 {
+            font-size: 70px;
+            max-width: 700px;
+        }
+
+        .jumbotron-home .container-fluid p {
+            font-size: 30px;
+            max-width: 1300px;
+        }
+/*Jumbotron Home*/
+
+
+/*Jumbotron Bottom Menu*/
+.jumbotron-bottom-menu li {
+    width: 100%;
+}
+
+    .jumbotron-bottom-menu li:last-child {
+    }
+
+    .jumbotron-bottom-menu li a {
+        text-decoration: none;
+        padding: 12px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .jumbotron-bottom-menu li a:hover {
+            text-decoration: none;
+            color: white;
+            background: #00000016;
+        }
+
+    .jumbotron-bottom-menu li:first-child {
+    }
+
+    .jumbotron-bottom-menu li a .material-icons {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+.jumbotron-bottom-menu ul {
+    background: #ebebebff;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-top: -20px;
+}
+/*.menuBorder{
+    background:url('../img/cerceve2.webp');
+    background-position:right;
+    background-repeat:no-repeat;
+}*/
+/*Jumbotron Bottom Menu*/
+/*Cards Up*/
+.before-cards-info .col-md-6 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.before-cards-info img {
+    padding: 0 12px;
+}
+
+.before-cards-info p {
+    line-height: 35px;
+    margin-top: 40px;
+}
+
+.card-footer {
+    background: green;
+}
+
+    .card-footer small {
+        color: white !important;
+    }
+/*Cards Up*/
+/*Login Page*/
+.loginFormContainer {
+    background: url('../img/login.jpg');
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -60px;
+}
+
+.loginFormContent {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 21px;
+    border-color: #00000039 !important;
+    color: white;
+    border-color: white !important;
+}
+
+    .loginFormContent input {
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid white;
+        border-radius: 0;
+    }
+
+.form-control:focus {
+    background: transparent;
+    box-shadow: green 0 0 0 !important;
+    border-color: white !important;
+}
+
+.loginFormFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    height: 100vh;
+}
+/*Accordion Home*/
+
+.accordion-flush .accordion-item .accordion-button {
+    padding: 15px 0;
+}
+
+button:focus:not(:focus-visible) {
+    box-shadow: green 0 0 0px;
+}
+
+.accordion-home h1 {
+    max-width: 100px;
+}
+
+input:focus {
+    box-shadow: green 10px 0px 1px !important;
+    border-color: green !important;
+}
+
+.accordion-home .col-md-6 {
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+}
+/*Accordion Home*/
+
+
+
+
+
+/*Contact Home*/
+
+.mapBorder {
+    background: url('../img/cerceve.webp');
+    background-repeat: no-repeat;
+    height: 720px;
+}
+
+
+/*Contact Home*/
+
+
+
+
+@media (max-width: 768px) {
+    .navbar-light {
+        background: #4c6a2a !important;
+        padding: 0;
+    }
+
+        .navbar-light .navbar-toggler {
+            border: 0 !important;
+            color: white !important;
+        }
+
+    .navbar-link-icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    button:focus:not(:focus-visible) {
+        outline: none !important;
+        box-shadow: 0 0 0 0rem;
+    }
+
+    .jumbotron-home .container-fluid h1 {
+        font-size: 50px;
+        max-width: 700px;
+    }
+
+    .jumbotron-home .container-fluid p {
+        font-size: 20px;
+        max-width: 1300px;
+    }
+
+    .before-cards-info p {
+        line-height: 35px;
+        margin-top: 0px;
+        padding: 0 12px;
+    }
+
+    .before-cards-info h1 {
+        margin-top: 20px;
+        padding: 0 12px;
+    }
+
+    .accordion-flush .accordion-item .accordion-button {
+        padding: 15px 0;
+    }
+
+    .accordion-home .col-md-6 {
+        height: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: rgba(0,0,0,.0);
+        background: rgba(0,0,0,.0);
+        padding: 10px;
+    }
+
+    .login {
+        flex-flow: column;
+        display: flex;
+    }
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+    color: #0077cc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}

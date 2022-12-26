@@ -1,0 +1,48 @@
+﻿@model RecycleCoin.UI.Dtos.UserAddDto
+
+<div class="container-fluid loginFormContainer">
+    <div class="row">
+        <div class="col-md-12 loginFormFlex">
+            <div class="loginFormContent border p-5">
+                <div class="text-start">
+                    <h2 class="mb-3">Kayıt Ol</h2>
+                </div>
+                <form asp-action="Register" asp-controller="Auth" method="post">
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons" style="font-size: 16px; color: aquamarine; ">home</i> &nbsp
+                        <label style="font-size:15px;">Ad Soyad</label>
+                    </div>
+
+                    <input type="text" required asp-for="FullName" class="form-control" />
+                    <br />
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons" style="font-size: 16px; color: aquamarine; ">username</i> &nbsp
+                        <label style="font-size:15px;">Kullanıcı Adı</label>
+                    </div>
+                    <input type="text" required asp-for="UserName" class="form-control" />
+                    <br />
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons" style="font-size: 16px; color: aquamarine; ">password</i> &nbsp
+                        <label style="font-size:15px;">Şifre</label>
+                    </div>
+                    <input type="text" required asp-for="Password" class="form-control" />
+                    <div class="d-flex justify-content-between">
+                        <input type="submit" class="btn mt-3 p-0 text-white">
+                            <div class="d-flex align-items-center">
+
+                                <i class="material-icons" style="font-size: 15px; color: aquamarine; ">add</i> &nbsp <span style="font-size:14px;"><a class="text-decoration-none text-white" asp-page="/Login">Giriş Yap</a></span>
+
+                            </div>
+                        </input>
+                    </div>
+                </form>
+                <button class="btn btn-success mt-3">
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons" style="font-size: 15px; color: aquamarine; ">login</i> &nbsp <span style="font-size:14px;">Kayıt Ol</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

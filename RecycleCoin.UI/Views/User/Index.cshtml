@@ -1,0 +1,35 @@
+﻿@model User
+@{
+    ViewData["Title"] = "List";
+    Layout = "_LayoutUser";
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-warning" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Tam isminiz</th>
+            <th scope="col">Kullanıcı Adınız</th>
+            <th scope="col">SHA-256 Adresiniz</th>
+            <th scope="col">Coin Hesabınız</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">@Model.FullName</td>
+            <td scope="row">@Model.UserName</td>
+            <td scope="row">@Model.Identity</td>
+            <td scope="row">@Model.RecycleCoinAccount</td>
+        </tr>
+    </tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

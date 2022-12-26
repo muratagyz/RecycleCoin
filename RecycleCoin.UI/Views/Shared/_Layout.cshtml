@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RecycleApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RecycleApplication.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
+            <div class="container" style=" padding: 10px 15px;">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-page="/Index">
+                    <i class="material-icons" style="font-size: 24px; color: white;margin-right:10px; ">compost</i>
+                    Recycle Application
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark navbar-link-icon-container" asp-area="" asp-page="/Index">
+                                <i class="material-icons" style="font-size: 16px; color: white; ">home</i>
+                                <span>Anasayfa</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark navbar-link-icon-container" asp-area="" asp-page="/Index">
+                                <i class="material-icons" style="font-size: 16px; color: white; ">nature</i>
+                                <span>Proje Hakkında</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark navbar-link-icon-container" asp-area="" asp-page="/Index">
+                                <i class="material-icons" style="font-size: 16px; color: white; ">delete</i>
+                                <span>Geri Dönüşüm Puanları</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="login">
+                        <li class="nav-item list-unstyled" style=" padding: 10px;">
+                            <a href="~/Auth/Register" class="nav-link text-dark navbar-link-icon-container p-0" >
+                                <i class="material-icons" style="font-size: 16px; color: white; ">person_add</i>
+                                <span>Kayıt Ol</span>
+                            </a>
+                        </li>
+                        <li class="nav-item list-unstyled" style=" padding: 10px;">
+                            <a href="~/Auth/Login" class="nav-link text-dark navbar-link-icon-container p-0">
+                                <i class="material-icons" style="font-size: 16px; color: white; ">account_circle</i>
+                                <span>Giriş Yap</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-5">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - RecycleApplication - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> 

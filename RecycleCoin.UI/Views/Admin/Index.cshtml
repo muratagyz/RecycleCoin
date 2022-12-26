@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-warning" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<a href="~/Admin/UserCoinAdd">Kullanıcıya coin ata</a>
+<br />
+<a href="~/Admin/UserCoinGet">Kullanıcının bilgilerini listele</a>
+<br />
+<a href="~/Admin/CarbonAdd">Kullanıcı ürün ekleme</a>

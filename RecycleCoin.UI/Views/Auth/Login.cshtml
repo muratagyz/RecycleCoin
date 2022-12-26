@@ -1,0 +1,40 @@
+﻿@model RecycleCoin.UI.Dtos.UserLoginDto
+
+<div class="container-fluid loginFormContainer">
+    <div class="row">
+        <div class="col-md-12 loginFormFlex">
+            <div class="loginFormContent border p-5">
+                <form asp-action="Login" asp-controller="Auth" method="post">
+                    <div class="text-start">
+                        <h2 class="mb-3">Kullanıcı Girişi</h2>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons" style="font-size: 16px; color: aquamarine;">home</i> &nbsp
+                        <label style="font-size: 15px;">Kullanıcı Adı</label>
+                    </div>
+
+                    <input type="text" required asp-for="UserName" class="form-control" />
+                    <br />
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons" style="font-size: 16px; color: aquamarine;">password</i> &nbsp
+                        <label style="font-size: 15px;">Şifre</label>
+                    </div>
+                    <input type="text" required asp-for="Password" class="form-control" />
+                    <div class="d-flex justify-content-between">
+                        <button class="btn mt-3 p-0 text-white">
+                            <div class="d-flex align-items-center">
+                                <i class="material-icons" style="font-size: 15px; color: aquamarine;">add</i> &nbsp <span style="font-size: 14px;"><a asp-page="/Register" class="text-decoration-none text-white">Kayıt Ol</a></span>
+                            </div>
+                        </button>
+                        <input type="submit" class="btn btn-success mt-3">
+                            <div class="d-flex align-items-center">
+                                <i class="material-icons" style="font-size: 15px; color: aquamarine;">login</i> &nbsp <span style="font-size: 14px;">Giriş Yap</span>
+                            </div>
+                        </input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
